@@ -210,3 +210,56 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+  const printToDom = (divId, textToPrint) => {
+    const selectedDiv=document.getElementById(divId);
+    selectedDiv.innerHTML = textToPrint;
+};
+
+
+const buildPets= (pets) => {
+    let domString='';
+    pets.forEach ((pet) => {
+        domString += `<div class="card">`;
+        domString += `<h3 class="name">${pet.name}</h3>`;
+        domString += `<h3><img src="${pet.imageUrl}"></h3>`;
+        domString += `<strong>${pet.color}</strong>`;
+        domString += `<h3 class="description">${pet.specialSkill}</h3>`;
+        domString += `<h3 class="${pet.type}">${pet.type}</h3>`;
+        domString += `</div>`;
+    });
+    
+    printToDom('pets',domString);
+    };
+
+    const buttonClick = (e) => {
+        const buttonId = e.target.id;
+          
+          const selectedPets = [];
+          pets.forEach((pet) => {
+            if (pet.type === buttonId) {
+              selectedPets.push(pet);
+            }    
+          });
+      
+          if (buttonId === 'All'){
+            buildPets(pets);  
+          } else{
+            buildPets(selectedPets);
+          }
+      };
+    
+    const buttonEvents = () => {
+     document.getElementById('dino').addEventListener('click',buttonClick);
+     document.getElementById('cat').addEventListener('click',buttonClick);
+     document.getElementById('dog').addEventListener('click',buttonClick);
+     document.getElementById('All').addEventListener('click',buttonClick);
+    };
+    
+    const init = () => {
+      buttonEvents();
+      buildPets(pets);
+    };
+    
+    TODO:// TODO do I need this?
+    init ();
