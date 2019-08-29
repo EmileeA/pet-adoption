@@ -210,3 +210,26 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+  const printToDom = (divId, textToPrint) => {
+    const selectedDiv=document.getElementById(divId);
+    selectedDiv.innerHTML = textToPrint;
+};
+
+
+const buildPets= (pets) => {
+    let domString='';
+    pets.forEach ((pet) => {
+        domString += `<div class="card">`;
+        domString += `<h3 class="name">${pet.name}</h3>`;
+        domString += `<h3><img src="${pet.imageUrl}"></h3>`;
+        domString += `<strong>${pet.color}</strong>`;
+        domString += `<h3 class="description">${pet.specialSkill}</h3>`;
+        domString += `<h3 class="${pet.type}">${pet.type}</h3>`;
+        domString += `</div>`;
+    });
+    
+    printToDom('pets',domString);
+    };
+
+  
