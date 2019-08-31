@@ -37,6 +37,30 @@ body {
     color: navy;
     text-align: center; */
   }
-  
+  .welcome {
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro {
+    display: block;
+    justify-content: center;
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+}
+
 
  
