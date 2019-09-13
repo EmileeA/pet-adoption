@@ -22,4 +22,3 @@ Type of Pet: xxx
 - There should be some way for the user to unfilter the results (ie All Pets button).
 
 
-![MockUp](MockUp.png)
