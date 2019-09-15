@@ -262,5 +262,4 @@ const buildPets= (pets) => {
       buildPets(pets);
     };
     
-    TODO:// TODO do I need this?
     init ();
