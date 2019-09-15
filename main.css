@@ -11,14 +11,56 @@ body {
   }
   
   .card {
+    background-color: white;
     width: 30%;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: white;
+    color: navy;
     text-align: center;
   }
   
   .card img {
     height: 200px;
     width: 200px;
+    }
+
+  .main-image {
+      display: flex;
+      justify-content: center;
   }
+
+  #buttons {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 5px;
+    margin-bottom: 5px;
+    color: navy;
+    text-align: center; */
+  }
+  .welcome {
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro {
+    display: block;
+    justify-content: center;
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+}
+
+
+ 
