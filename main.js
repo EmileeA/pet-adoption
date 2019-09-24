@@ -211,15 +211,20 @@ const pets = [
     }
   ];
 
-  const printToDom = (divId, textToPrint) => {
+  //we are calling our second parameter domString because that is what is being printed to the dom. cont...
+  //we could call it anything, like, printToDom. 
+  const printToDom = (divId, domString) => {
     const selectedDiv=document.getElementById(divId);
-    selectedDiv.innerHTML = textToPrint;
+    selectedDiv.innerHTML = domString;
 };
 
-
+//"pets" is the parameter that I am expecting to be passed in... continued below
+//See line 248 (entire array) and 250 (selected parts of the array). 
 const buildPets= (pets) => {
     let domString='';
     pets.forEach ((pet) => {
+      //backtics are for anything you want to output/build. We can put variables in line without concatinating
+      // += is like a push to an array. it's going to tag that piece in to the back of the string.
         domString += `<div class="card">`;
         domString += `<h3 class="name">${pet.name}</h3>`;
         domString += `<h3><img src="${pet.imageUrl}"></h3>`;
@@ -257,9 +262,11 @@ const buildPets= (pets) => {
      document.getElementById('All').addEventListener('click',buttonClick);
     };
     
+    //init is for controlling the initial state of what people see
+    //defintion of my funtion
     const init = () => {
       buttonEvents();
       buildPets(pets);
     };
-    
+    //I'm executing my function
     init ();
